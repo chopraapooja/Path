@@ -48,11 +48,6 @@ public class PathsManagerTest {
     }
 
     @Test
-    public void isThereAnyPathBetween_Bangalore_Tokyo_should_give_TRUE() {
-        assertTrue(mgr.isThereAnyPathBetween("Bangalore", "Tokyo"));
-    }
-
-    @Test
     public void doExistsAsDestination_Singapore_should_give_true() {
         assertTrue(mgr.doExistsAsDestination("Singapore"));
     }
@@ -62,4 +57,45 @@ public class PathsManagerTest {
         assertFalse(mgr.doExistsAsDestination("GUMNAM"));
     }
 
+    @Test
+    public void isThereAnyPathBetween_Bangalore_Tokyo_should_give_TRUE() {
+        assertTrue(mgr.isThereAnyPathBetween("Bangalore", "Tokyo"));
+    }
+
+    @Test
+    public void isThereAnyPathBetween_Tokyo_Bangalore_should_give_TRUE() {
+        assertTrue(mgr.isThereAnyPathBetween("Tokyo", "Bangalore"));
+    }
+
+    @Test
+    public void isThereAnyPathBetween_Tokyo_Chennai_should_give_FALSE() {
+        assertFalse(mgr.isThereAnyPathBetween("Patiala", "Singapore"));
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
