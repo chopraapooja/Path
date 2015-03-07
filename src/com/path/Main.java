@@ -1,5 +1,7 @@
 package com.path;
 
+import java.util.ArrayList;
+
 /**
  * Created by poojar on 3/7/2015.
  */
@@ -14,7 +16,7 @@ public class Main {
         	System.out.println("No city named \""+invalidCity+"\" found in database.");
         }
         else {
-        	System.out.println(mgr.isThereAnyPathBetween(src,dest));
+        	System.out.println(mgr.findPathBetween(src, dest, new ArrayList<String>()));
         }
     }
 }
