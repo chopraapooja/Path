@@ -3,11 +3,8 @@ package com.csf;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
 
 /**
@@ -23,7 +20,7 @@ public class CSFReaderTest {
         }
         return true;
     }
-    
+
     @Before
     public void setUp() throws Exception {
         csfReader = new CSFReader();
@@ -32,33 +29,38 @@ public class CSFReaderTest {
     @Test
     public void toMap_should_map_string_having_CSV_into_map() {
         String number = "1,one";
-        Map<String, String[]> numberMap = csfReader.toMap(number);
-        Map<String, String[]> expectedMap = new HashMap<>();
-        expectedMap.put("1", new String[]{"one"});
+        Map<String, List<String>> numberMap = csfReader.toMap(number);
+        Map<String, List<String >> expectedMap = new HashMap<>();
+        expectedMap.put("1", Arrays.asList("one"));
         assertTrue(compareKeys(expectedMap, numberMap));
         for(Object key : numberMap.keySet()) {
-            assertArrayEquals(numberMap.get(key),expectedMap.get(key));
+            assertTrue(numberMap.get(key).containsAll(expectedMap.get(key)));
         }
     }
     @Test
     public void toMap_should_map_string_having_CSV_with_multiple_lines_into_map(){
         String numbers = "1,one\n2,two";
-        Map<String, String[]> numbersMap = csfReader.toMap(numbers);
-        Map<String, String[]> expectedMap = new HashMap<>();
-        expectedMap.put("1", new String[]{"one"});
-        expectedMap.put("2", new String[]{"two"});
+        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
+        Map<String, List<String>> expectedMap = new HashMap<>();
+        expectedMap.put("1", Arrays.asList("one"));
+        expectedMap.put("2", Arrays.asList("two"));
         assertTrue(compareKeys(expectedMap, numbersMap));
         for(Object key : numbersMap.keySet()) {
-            assertArrayEquals(numbersMap.get(key),expectedMap.get(key));
+            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
         }
     }
-    @Test
-    public void toMap() {
-//        String str1[] = new String[]{"you","me"};
-//        String str2[] = new String[]{"you","me"};
-//        System.out.println(str1.equals(str2));
-//        assertArrayEquals(str1, str2);
-    }
+//    @Test
+//    public void toMap_should_put_repeating_key_values_in_the_same_key() {
+//        String numbers = "1,one\n2,two\n1,ek";
+//        Map<String, String[]> numbersMap = csfReader.toMap(numbers);
+//        Map<String, String[]> expectedMap = new HashMap<>();
+//        expectedMap.put("1", new String[]{"one","ek"});
+//        expectedMap.put("2", new String[]{"two"});
+//        assertTrue(compareKeys(expectedMap, numbersMap));
+//        for(Object key : numbersMap.keySet()) {
+//            assertArrayEquals(numbersMap.get(key),expectedMap.get(key));
+//        }
+//    }
 
 }
 

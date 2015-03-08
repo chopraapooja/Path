@@ -5,8 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.CharBuffer;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by poojar on 3/7/2015.
@@ -33,11 +32,14 @@ public class CSFReader {
 
     public Map toMap(String str) {
         String[] lines = str.split("\n");
-        Map<String, String[]> result = new HashMap<>();
+        Map<String, List<String>> result = new HashMap<>();
         for (String line : lines) {
             String[] vals = line.split(",");
             if(vals.length == 2) {
-                result.put(vals[0], new String[]{vals[1]});
+                if(result.containsKey(vals[0])) {
+
+                }
+            result.put(vals[0],Arrays.asList(vals[1]));
             }
         }
         return result;
@@ -47,7 +49,7 @@ public class CSFReader {
         CSFReader r = new CSFReader("./data/paths.txt");
         String fileContents = r.getFileContents();
         System.out.println(fileContents);
-        Map<String,String[]> paths = r.toMap(fileContents);
+        Map<String,ArrayList<String>> paths = r.toMap(fileContents);
 //        System.out.println(paths.keySet());
     }
 
