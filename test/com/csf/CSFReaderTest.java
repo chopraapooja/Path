@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
@@ -15,6 +16,14 @@ import static org.junit.Assert.*;
 public class CSFReaderTest {
     CSFReader csfReader;
 
+    boolean compareKeys(Map map1, Map map2) {
+        if (map1.size() != map2.size()) return false;
+        for (Object key : map1.keySet()) {
+            if(! map2.containsKey(key)) return false;
+        }
+        return true;
+    }
+    
     @Before
     public void setUp() throws Exception {
         csfReader = new CSFReader();
@@ -26,9 +35,10 @@ public class CSFReaderTest {
         Map<String, String[]> numberMap = csfReader.toMap(number);
         Map<String, String[]> expectedMap = new HashMap<>();
         expectedMap.put("1", new String[]{"one"});
-        assertTrue(numberMap.containsKey("1"));
-        assertArrayEquals(numberMap.get("1"), new String[]{"one"});
-        assertEquals(numberMap.keySet().size(), 1);
+        assertTrue(compareKeys(expectedMap, numberMap));
+        for(Object key : numberMap.keySet()) {
+            assertArrayEquals(numberMap.get(key),expectedMap.get(key));
+        }
     }
     @Test
     public void toMap_should_map_string_having_CSV_with_multiple_lines_into_map(){
@@ -37,13 +47,18 @@ public class CSFReaderTest {
         Map<String, String[]> expectedMap = new HashMap<>();
         expectedMap.put("1", new String[]{"one"});
         expectedMap.put("2", new String[]{"two"});
-        assertTrue(numbersMap.containsKey("1"));
-        assertTrue(numbersMap.containsKey("2"));
-        assertArrayEquals(numbersMap.get("1"), new String[]{"one"});
-        assertArrayEquals(numbersMap.get("2"), new String[]{"two"});
-        assertEquals(numbersMap.keySet().size(), 2);
+        assertTrue(compareKeys(expectedMap, numbersMap));
+        for(Object key : numbersMap.keySet()) {
+            assertArrayEquals(numbersMap.get(key),expectedMap.get(key));
+        }
     }
-
+    @Test
+    public void toMap() {
+//        String str1[] = new String[]{"you","me"};
+//        String str2[] = new String[]{"you","me"};
+//        System.out.println(str1.equals(str2));
+//        assertArrayEquals(str1, str2);
+    }
 
 }
 

@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e58696-c3d9-4564-b868-038b17465d8c" name="Default" comment="First Test Case to test basic behaviour of toMap">
-      <change type="DELETED" beforePath="D:\javaWorkspace\javaAssignments\Path\src\com\csf\Spike.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/csf/CSFReader.java" afterPath="$PROJECT_DIR$/src/com/csf/CSFReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" afterPath="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" />
     </list>
-    <list id="f4c6c953-d3d4-43f1-8767-54b5aa2fbc25" name="Failed commit: Default" comment="First Test Case to test basic behaviour of toMap">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" />
-    </list>
+    <list id="f4c6c953-d3d4-43f1-8767-54b5aa2fbc25" name="Failed commit: Default" comment="First Test Case to test basic behaviour of toMap" />
     <ignored path="Path.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,22 +61,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSFReader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSFReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/csf/CSFReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.38423645" vertical-offset="598" max-vertical-offset="2106">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSFReaderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/csf/CSFReaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.04" vertical-offset="78" max-vertical-offset="1690">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="579" max-vertical-offset="2210">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,6 +99,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CSFReaderTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/csf/CSFReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48669952" vertical-offset="156" max-vertical-offset="2080">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -128,9 +129,9 @@
         <option value="$PROJECT_DIR$/src/com/path/Main.java" />
         <option value="$PROJECT_DIR$/data/paths.txt" />
         <option value="$PROJECT_DIR$/data/temp.txt" />
-        <option value="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/com/csf/CSFReader.java" />
         <option value="$PROJECT_DIR$/src/com/csf/Spike.java" />
+        <option value="$PROJECT_DIR$/src/com/csf/CSFReader.java" />
+        <option value="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" />
       </list>
     </option>
   </component>
@@ -603,8 +604,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.CSFReaderTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CSFReaderTest.toMap_should_map_string_having_CSV_into_map" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CSFReader" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CSFReader" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CSFReaderTest.toMap_should_map_string_having_CSV_into_map" />
         <item index="3" class="java.lang.String" itemvalue="Application.Spike" />
         <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
@@ -739,7 +740,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="988">
           <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -790,7 +795,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="988">
           <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -864,19 +873,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/csf/CSFReaderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/csf/CSFReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.04" vertical-offset="78" max-vertical-offset="1690">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="579" max-vertical-offset="2210">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/csf/CSFReader.java">
+    <entry file="file://$PROJECT_DIR$/test/com/csf/CSFReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.38423645" vertical-offset="598" max-vertical-offset="2106">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.48669952" vertical-offset="156" max-vertical-offset="2080">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
