@@ -49,18 +49,18 @@ public class CSFReaderTest {
             assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
         }
     }
-//    @Test
-//    public void toMap_should_put_repeating_key_values_in_the_same_key() {
-//        String numbers = "1,one\n2,two\n1,ek";
-//        Map<String, String[]> numbersMap = csfReader.toMap(numbers);
-//        Map<String, String[]> expectedMap = new HashMap<>();
-//        expectedMap.put("1", new String[]{"one","ek"});
-//        expectedMap.put("2", new String[]{"two"});
-//        assertTrue(compareKeys(expectedMap, numbersMap));
-//        for(Object key : numbersMap.keySet()) {
-//            assertArrayEquals(numbersMap.get(key),expectedMap.get(key));
-//        }
-//    }
+    @Test
+    public void toMap_should_put_repeating_key_values_in_the_same_key() {
+        String numbers = "1,one\n2,two\n1,ek";
+        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
+        Map<String, List<String>> expectedMap = new HashMap<>();
+        expectedMap.put("1", Arrays.asList("one","ek"));
+        expectedMap.put("2", Arrays.asList("two"));
+        assertTrue(compareKeys(expectedMap, numbersMap));
+        for(Object key : numbersMap.keySet()) {
+            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
+        }
+    }
 
 }
 

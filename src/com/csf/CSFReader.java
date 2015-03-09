@@ -32,14 +32,16 @@ public class CSFReader {
 
     public Map toMap(String str) {
         String[] lines = str.split("\n");
-        Map<String, List<String>> result = new HashMap<>();
+        Map<String, ArrayList<String>> result = new HashMap<>();
         for (String line : lines) {
             String[] vals = line.split(",");
             if(vals.length == 2) {
                 if(result.containsKey(vals[0])) {
-
+                    result.get(vals[0]).add(vals[1]);
                 }
-            result.put(vals[0],Arrays.asList(vals[1]));
+                else{
+                    result.put(vals[0],new ArrayList<String>(Arrays.asList(vals[1])));
+                }
             }
         }
         return result;
@@ -49,8 +51,6 @@ public class CSFReader {
         CSFReader r = new CSFReader("./data/paths.txt");
         String fileContents = r.getFileContents();
         System.out.println(fileContents);
-        Map<String,ArrayList<String>> paths = r.toMap(fileContents);
-//        System.out.println(paths.keySet());
     }
 
 }
