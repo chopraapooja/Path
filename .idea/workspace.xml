@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2e58696-c3d9-4564-b868-038b17465d8c" name="Default" comment="First Test Case to test basic behaviour of toMap">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/csf/CSFReader.java" afterPath="$PROJECT_DIR$/src/com/csf/CSFReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/path/PathArgsParser.java" afterPath="$PROJECT_DIR$/src/com/path/PathArgsParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/path/PathArgsParserTest.java" afterPath="$PROJECT_DIR$/test/com/path/PathArgsParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,8 +50,8 @@
       <file leaf-file-name="PathArgsParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/path/PathArgsParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46207586" vertical-offset="343" max-vertical-offset="1794">
-              <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.36926147" vertical-offset="644" max-vertical-offset="1950">
+              <caret line="39" column="101" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -910,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/path/PathArgsParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46207586" vertical-offset="343" max-vertical-offset="1794">
-          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.36926147" vertical-offset="644" max-vertical-offset="1950">
+          <caret line="39" column="101" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

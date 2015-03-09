@@ -36,6 +36,12 @@ public class PathArgsParserTest {
         assertEquals(parser.getDest(), "Foo");
         assertEquals(parser.getFileURL(), "paths");
     }
+    @Test
+    public void PathArgsParser_should_give_null_fileURL_when_only_source_and_destination_are_supplied() throws Exception{
+        String[] args = new String[]{"Patiala","Foo"};
+        PathArgsParser parser = new PathArgsParser(args);
+        assertEquals(parser.getFileURL(), null);
+    }
 }
 
 
