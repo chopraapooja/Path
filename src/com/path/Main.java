@@ -7,6 +7,11 @@ import java.util.ArrayList;
  * Created by poojar on 3/7/2015.
  */
 public class Main {
+    public static void printPath(String citiesURL, String path) {
+        if(citiesURL == null) {
+            System.out.println(path);
+        }
+    }
     public static void main(String[] args){
         PathArgsParser parser = null;
         try {
@@ -20,7 +25,7 @@ public class Main {
                 System.out.println("No city named \""+invalidCity+"\" found in database.");
             }
             else {
-                System.out.println(mgr.findPathBetween(src, dest, new ArrayList<String>()));
+                printPath(null,mgr.findPathBetween(src, dest, new ArrayList<String>()));
             }
         }
         catch (Exception e) {

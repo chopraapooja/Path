@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class PathsManager {
     Map<String, ArrayList> directPaths = new HashMap<String, ArrayList>();
-    PathsManager() {
+    public PathsManager() {
         directPaths.put("Bangalore", new ArrayList<String>(Arrays.asList("Singapore")));
         directPaths.put("Singapore", new ArrayList<String>(Arrays.asList("Seoul", "Dubai","Bangalore")));
         directPaths.put("Seoul", new ArrayList<String>(Arrays.asList("Beijing","Singapore")));
