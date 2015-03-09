@@ -1,5 +1,8 @@
 package com.path;
 
+import com.csf.CSFReader;
+
+import java.io.IOException;
 import java.util.*;
 /**
  * Created by poojar on 3/7/2015.
@@ -16,6 +19,26 @@ public class PathsManager {
         directPaths.put("Patiala", new ArrayList<String>(Arrays.asList("Lahor")));
         directPaths.put("Lahor", new ArrayList<String>(Arrays.asList("Patiala")));
 
+    }
+
+    public void printPaths() {
+        for (Object key : directPaths.keySet()) {
+            System.out.print(key+" :");
+            for (Object dest : directPaths.get(key)) {
+                System.out.print(" " + dest);
+            }
+            System.out.println();
+        }
+    }
+
+    public PathsManager(String fileURL)throws Exception{
+        CSFReader reader = null;
+        try {
+            reader = new CSFReader(fileURL);
+        } catch (IOException e) {
+            throw new Exception("No database named "+ fileURL +" found.");
+        }
+        directPaths = reader.toMap(reader.getFileContents());
     }
 
     boolean isDirectPathBetween(String src, String dest) {

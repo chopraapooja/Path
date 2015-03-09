@@ -32,15 +32,19 @@ public class CSFReader {
 
     public Map toMap(String str) {
         String[] lines = str.split("\n");
+        int j = 0, k=1;
         Map<String, ArrayList<String>> result = new HashMap<>();
         for (String line : lines) {
             String[] vals = line.split(",");
             if(vals.length == 2) {
-                if(result.containsKey(vals[0])) {
-                    result.get(vals[0]).add(vals[1]);
-                }
-                else{
-                    result.put(vals[0],new ArrayList<String>(Arrays.asList(vals[1])));
+                for (int i = 0; i < 2; i++) {
+                    if(result.containsKey(vals[j])) {
+                        result.get(vals[j]).add(vals[k]);
+                    }
+                    else{
+                        result.put(vals[j],new ArrayList<String>(Arrays.asList(vals[k])));
+                    }
+                    j=1; k=0;
                 }
             }
         }
