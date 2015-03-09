@@ -42,6 +42,31 @@ public class PathArgsParserTest {
         PathArgsParser parser = new PathArgsParser(args);
         assertEquals(parser.getFileURL(), null);
     }
+    @Test
+    public void PathArgsParser_should_give_null_cityFileURL_when_only_source_and_destination_are_supplied() throws Exception{
+        String[] args = new String[]{"Patiala","Foo"};
+        PathArgsParser parser = new PathArgsParser(args);
+        assertEquals(parser.getCityFileURL(), null);
+    }
+
+    @Test
+    public void PathArgsManager_should_extract_cityInfo_file_name_when_c_option_is_present() throws Exception {
+        String[] args = new String[]{"-c","city","Patiala","Foo"};
+        PathArgsParser parser = new PathArgsParser(args);
+        assertEquals(parser.getSource(), "Patiala");
+        assertEquals(parser.getDest(), "Foo");
+        assertEquals(parser.getFileURL(), null);
+        assertEquals(parser.getCityFileURL(), "city");
+    }
+    @Test
+    public void PathArgsManager_should_read_f_and_c_both_options_together() throws Exception {
+        String[] args = new String[]{"-c","city","-f","paths","Patiala","Foo"};
+        PathArgsParser parser = new PathArgsParser(args);
+        assertEquals(parser.getSource(), "Patiala");
+        assertEquals(parser.getDest(), "Foo");
+        assertEquals(parser.getFileURL(), "paths");
+        assertEquals(parser.getCityFileURL(), "city");
+    }
 }
 
 

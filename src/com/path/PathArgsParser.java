@@ -7,6 +7,7 @@ public class PathArgsParser {
     private String source;
     private String dest;
     private String fileURL;
+    private String cityFileURL;
 
     String getSource() {
         return source;
@@ -31,15 +32,21 @@ public class PathArgsParser {
     public PathArgsParser(String[] args) throws Exception {
         if(args.length < 2) throw new Exception("Insufficent Arguments");
         int indexOfF = indexOf(args, "-f");
+        int indexOfC = indexOf(args, "-c");
         int indexOfFile = (indexOfF != -1) ? indexOfF+1 :-1 ;
+        int indexOfCityFile = (indexOfC != -1) ? indexOfC+1 :-1 ;
         int indexOfSrc = args.length-2;
         int indexOfDest = args.length-1;
 
         this.source = args[indexOfSrc];
         this.dest = args[indexOfDest];
         this.fileURL = (indexOfFile != -1) ? args[indexOfFile] : null;
+        this.cityFileURL = (indexOfCityFile != -1) ? args[indexOfCityFile] : null;
     }
 
+    public String getCityFileURL() {
+        return cityFileURL;
+    }
 }
 
 
