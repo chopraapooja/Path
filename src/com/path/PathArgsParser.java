@@ -12,7 +12,8 @@ public class PathArgsParser {
     String getDest() {
         return dest;
     }
-    public PathArgsParser(String[] args) {
+    public PathArgsParser(String[] args) throws Exception {
+        if(args.length < 2) throw new Exception("Insufficent Arguments");
         if(args.length == 2) {
             this.source = args[0];
             this.dest = args[1];

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e58696-c3d9-4564-b868-038b17465d8c" name="Default" comment="First Test Case to test basic behaviour of toMap">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/path/PathArgsParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/path/PathArgsParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/csf/CSFReader.java" afterPath="$PROJECT_DIR$/src/com/csf/CSFReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" afterPath="$PROJECT_DIR$/test/com/csf/CSFReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/path/PathArgsParser.java" afterPath="$PROJECT_DIR$/src/com/path/PathArgsParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/path/PathArgsParserTest.java" afterPath="$PROJECT_DIR$/test/com/path/PathArgsParserTest.java" />
     </list>
     <list id="f4c6c953-d3d4-43f1-8767-54b5aa2fbc25" name="Failed commit: Default" comment="First Test Case to test basic behaviour of toMap" />
     <ignored path="Path.iws" />
@@ -84,8 +81,8 @@
       <file leaf-file-name="PathArgsParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/path/PathArgsParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728">
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
               <folding>
                 <element signature="e#166#167#0" expanded="true" />
                 <element signature="e#195#196#0" expanded="true" />
@@ -99,8 +96,8 @@
       <file leaf-file-name="PathArgsParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/path/PathArgsParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.435468" vertical-offset="0" max-vertical-offset="1015">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.752495" vertical-offset="0" max-vertical-offset="1040">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -909,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/path/PathArgsParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
           <folding>
             <element signature="e#166#167#0" expanded="true" />
             <element signature="e#195#196#0" expanded="true" />
@@ -922,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/path/PathArgsParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.435468" vertical-offset="0" max-vertical-offset="1015">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.752495" vertical-offset="0" max-vertical-offset="1040">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
