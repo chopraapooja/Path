@@ -11,6 +11,7 @@ public class Main {
         if(citiesURL == null) {
             System.out.println(path);
         }
+
     }
     public static void main(String[] args){
         PathArgsParser parser = null;
@@ -19,13 +20,14 @@ public class Main {
             String src = parser.getSource();
             String dest = parser.getDest();
             String fileURL = parser.getFileURL();
+            String cityFileURL = parser.getCityFileURL();
             PathsManager mgr = (fileURL != null) ? new PathsManager(fileURL) : new PathsManager();
             String invalidCity = mgr.doExists(src) ? (mgr.doExists(dest) ? null : dest) : src;
             if(invalidCity != null) {
                 System.out.println("No city named \""+invalidCity+"\" found in database.");
             }
             else {
-                printPath(null,mgr.findPathBetween(src, dest, new ArrayList<String>()));
+                printPath(cityFileURL, mgr.findPathBetween(src, dest, new ArrayList<String>()));
             }
         }
         catch (Exception e) {

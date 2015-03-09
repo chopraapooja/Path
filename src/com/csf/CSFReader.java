@@ -30,7 +30,7 @@ public class CSFReader {
         return this.fileContents;
     }
 
-    public Map toMap(String str) {
+    public Map toDirectPaths(String str) {
         String[] lines = str.split("\n");
         int j = 0, k=1;
         Map<String, ArrayList<String>> result = new HashMap<>();

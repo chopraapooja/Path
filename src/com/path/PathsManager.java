@@ -38,7 +38,7 @@ public class PathsManager {
         } catch (IOException e) {
             throw new Exception("No database named "+ fileURL +" found.");
         }
-        directPaths = reader.toMap(reader.getFileContents());
+        directPaths = reader.toDirectPaths(reader.getFileContents());
     }
 
     boolean isDirectPathBetween(String src, String dest) {
