@@ -25,42 +25,42 @@ public class CSFReaderTest {
     public void setUp() throws Exception {
         csfReader = new CSFReader();
     }
-
-    @Test
-    public void toMap_should_map_string_having_CSV_into_map() {
-        String number = "1,one";
-        Map<String, List<String>> numberMap = csfReader.toMap(number);
-        Map<String, List<String >> expectedMap = new HashMap<>();
-        expectedMap.put("1", Arrays.asList("one"));
-        assertTrue(compareKeys(expectedMap, numberMap));
-        for(Object key : numberMap.keySet()) {
-            assertTrue(numberMap.get(key).containsAll(expectedMap.get(key)));
-        }
-    }
-    @Test
-    public void toMap_should_map_string_having_CSV_with_multiple_lines_into_map(){
-        String numbers = "1,one\n2,two";
-        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
-        Map<String, List<String>> expectedMap = new HashMap<>();
-        expectedMap.put("1", Arrays.asList("one"));
-        expectedMap.put("2", Arrays.asList("two"));
-        assertTrue(compareKeys(expectedMap, numbersMap));
-        for(Object key : numbersMap.keySet()) {
-            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
-        }
-    }
-    @Test
-    public void toMap_should_put_repeating_key_values_in_the_same_key() {
-        String numbers = "1,one\n2,two\n1,ek";
-        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
-        Map<String, List<String>> expectedMap = new HashMap<>();
-        expectedMap.put("1", Arrays.asList("one","ek"));
-        expectedMap.put("2", Arrays.asList("two"));
-        assertTrue(compareKeys(expectedMap, numbersMap));
-        for(Object key : numbersMap.keySet()) {
-            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
-        }
-    }
+//
+//    @Test
+//    public void toMap_should_map_string_having_CSV_into_map() {
+//        String number = "1,one";
+//        Map<String, List<String>> numberMap = csfReader.toMap(number);
+//        Map<String, List<String >> expectedMap = new HashMap<>();
+//        expectedMap.put("1", Arrays.asList("one"));
+//        assertTrue(compareKeys(expectedMap, numberMap));
+//        for(Object key : numberMap.keySet()) {
+//            assertTrue(numberMap.get(key).containsAll(expectedMap.get(key)));
+//        }
+//    }
+//    @Test
+//    public void toMap_should_map_string_having_CSV_with_multiple_lines_into_map(){
+//        String numbers = "1,one\n2,two";
+//        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
+//        Map<String, List<String>> expectedMap = new HashMap<>();
+//        expectedMap.put("1", Arrays.asList("one"));
+//        expectedMap.put("2", Arrays.asList("two"));
+//        assertTrue(compareKeys(expectedMap, numbersMap));
+//        for(Object key : numbersMap.keySet()) {
+//            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
+//        }
+//    }
+//    @Test
+//    public void toMap_should_put_repeating_key_values_in_the_same_key() {
+//        String numbers = "1,one\n2,two\n1,ek";
+//        Map<String, List<String>> numbersMap = csfReader.toMap(numbers);
+//        Map<String, List<String>> expectedMap = new HashMap<>();
+//        expectedMap.put("1", Arrays.asList("one","ek"));
+//        expectedMap.put("2", Arrays.asList("two"));
+//        assertTrue(compareKeys(expectedMap, numbersMap));
+//        for(Object key : numbersMap.keySet()) {
+//            assertTrue(numbersMap.get(key).containsAll(expectedMap.get(key)));
+//        }
+//    }
 
 }
 

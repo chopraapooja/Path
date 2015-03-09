@@ -22,11 +22,10 @@ public class Main {
             else {
                 System.out.println(mgr.findPathBetween(src, dest, new ArrayList<String>()));
             }
-
-
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
