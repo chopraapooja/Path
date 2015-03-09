@@ -72,6 +72,10 @@ public class PathsManagerTest {
         assertFalse(mgr.isThereAnyPathBetween("Patiala", "Singapore"));
     }
 
+    @Test
+    public void getPath() {
+        
+    }
 }
 
 
