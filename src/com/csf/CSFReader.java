@@ -48,7 +48,8 @@ public class CSFReader {
     }
 
     public static void main(String[] args) throws IOException {
-        CSFReader r = new CSFReader("./data/paths.txt");
+        String fileURL = args[0];
+        CSFReader r = new CSFReader(fileURL);
         String fileContents = r.getFileContents();
         System.out.println(fileContents);
     }

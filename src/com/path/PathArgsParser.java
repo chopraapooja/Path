@@ -30,14 +30,43 @@ public class PathArgsParser {
 
     public PathArgsParser(String[] args) throws Exception {
         if(args.length < 2) throw new Exception("Insufficent Arguments");
-        if(args.length >= 2) {
-            this.source = args[0];
-            this.dest = args[1];
-        }
         int indexOfF = indexOf(args, "-f");
-        if(indexOfF != -1) {
-            fileURL = args[indexOfF + 1];
-        }
+        int indexOfFile = (indexOfF != -1) ? indexOfF+1 :-1 ;
+        int indexOfSrc = args.length-2;
+        int indexOfDest = args.length-1;
+
+        this.source = args[indexOfSrc];
+        this.dest = args[indexOfDest];
+        this.fileURL = (indexOfFile != -1) ? args[indexOfFile] : null;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

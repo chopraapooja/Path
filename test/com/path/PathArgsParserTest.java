@@ -27,12 +27,37 @@ public class PathArgsParserTest {
         }
         assertTrue(errMsg.equals("Insufficent Arguments"));
     }
+
     @Test
     public void PathsArgsParser_should_extract_file_name_when_f_option_is_present() throws Exception {
-        String[] args = new String[]{"Patiala","Foo","-f","paths"};
+        String[] args = new String[]{"-f","paths","Patiala","Foo"};
         PathArgsParser parser = new PathArgsParser(args);
         assertEquals(parser.getSource(), "Patiala");
         assertEquals(parser.getDest(), "Foo");
         assertEquals(parser.getFileURL(), "paths");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
